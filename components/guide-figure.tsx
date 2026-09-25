@@ -1,5 +1,4 @@
 import { ArrowUpRight } from 'lucide-react';
-import Image from 'next/image';
 
 type GuideFigureProps = {
   file: string;
@@ -24,14 +23,15 @@ export function GuideFigure({ file, title, alt, caption }: GuideFigureProps) {
         rel="noreferrer"
         aria-label={`Ampliar imagem: ${title} (abre em nova aba)`}
       >
-        <Image
+        {/* Static PNGs on GitHub Pages need no client-side image component or optimizer. */}
+        {/* oxlint-disable-next-line nextjs/no-img-element */}
+        <img
           src={src}
           alt={alt}
           width={884}
           height={864}
           loading="lazy"
           decoding="async"
-          unoptimized
         />
       </a>
       <figcaption>
