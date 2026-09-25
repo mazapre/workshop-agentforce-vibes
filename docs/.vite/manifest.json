@@ -29,8 +29,19 @@
       "_framework-CydgMYH7.js"
     ]
   },
+  "node_modules/vinext/dist/shims/image.js": {
+    "file": "workshop-agentforce-vibes/_next/static/chunks/image-zsmGqg0u.js",
+    "name": "image",
+    "src": "node_modules/vinext/dist/shims/image.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-DmRQ7ntw.js",
+      "virtual:vinext-app-browser-entry",
+      "_framework-CydgMYH7.js"
+    ]
+  },
   "node_modules/vinext/dist/shims/internal/app-route-prefetch-policy.js": {
-    "file": "workshop-agentforce-vibes/_next/static/chunks/app-route-prefetch-policy-DU6zkVj6.js",
+    "file": "workshop-agentforce-vibes/_next/static/chunks/app-route-prefetch-policy-D_OPSU43.js",
     "name": "app-route-prefetch-policy",
     "src": "node_modules/vinext/dist/shims/internal/app-route-prefetch-policy.js",
     "isDynamicEntry": true,
@@ -39,7 +50,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "workshop-agentforce-vibes/_next/static/chunks/layout-segment-context-Cp9rL8NG.js",
+    "file": "workshop-agentforce-vibes/_next/static/chunks/layout-segment-context-CkBsDkSZ.js",
     "name": "layout-segment-context",
     "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -50,7 +61,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/streamed-icons.js": {
-    "file": "workshop-agentforce-vibes/_next/static/chunks/streamed-icons-zqOuq9g7.js",
+    "file": "workshop-agentforce-vibes/_next/static/chunks/streamed-icons-L8wIDlRD.js",
     "name": "streamed-icons",
     "src": "node_modules/vinext/dist/shims/streamed-icons.js",
     "isDynamicEntry": true,
@@ -60,7 +71,7 @@
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "workshop-agentforce-vibes/_next/static/chunks/index-C-DR60c-.js",
+    "file": "workshop-agentforce-vibes/_next/static/chunks/index-DLKa6Suo.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
@@ -74,7 +85,8 @@
       "node_modules/vinext/dist/shims/layout-segment-context.js",
       "_Icon-ARomexDQ.js",
       "node_modules/vinext/dist/shims/streamed-icons.js",
-      "components/copy-prompt.tsx"
+      "components/copy-prompt.tsx",
+      "node_modules/vinext/dist/shims/image.js"
     ]
   }
 }

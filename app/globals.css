@@ -731,6 +731,59 @@ footer {
   color: #52666f;
   font-size: 14px;
 }
+.guide-figure {
+  margin: 28px 0;
+  overflow: hidden;
+  border: 1px solid #d9e1e1;
+  border-radius: 8px;
+  background: #fff;
+}
+.figure-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 14px 18px;
+  background: #edf4f2;
+  border-bottom: 1px solid #d9e1e1;
+}
+.figure-heading > span {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #0b6655;
+}
+.figure-heading > strong {
+  font-size: 16px;
+  color: #152a32;
+}
+.figure-image-link {
+  display: block;
+  cursor: zoom-in;
+}
+.figure-image-link:focus-visible {
+  outline-offset: -4px;
+}
+.guide-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.guide-figure figcaption {
+  padding: 16px 18px;
+  border-top: 1px solid #d9e1e1;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #52666f;
+}
+.guide-figure figcaption p {
+  margin: 0 0 10px;
+}
+.guide-figure figcaption a {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  font-weight: 600;
+}
 .footer-links {
   display: flex;
   flex-wrap: wrap;
@@ -842,8 +895,18 @@ footer {
   }
   .recovery,
   .validation,
-  .step-heading {
+  .step-heading,
+  .guide-figure {
     break-inside: avoid;
+  }
+  .guide-figure img {
+    width: auto;
+    max-width: 100%;
+    max-height: 16cm;
+    margin: auto;
+  }
+  .guide-figure figcaption a {
+    display: none;
   }
 }
 

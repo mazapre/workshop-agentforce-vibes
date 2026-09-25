@@ -9,6 +9,7 @@ import {
   ArrowRight,
 } from 'lucide-react';
 import { CopyPrompt } from '@/components/copy-prompt';
+import { GuideFigure } from '@/components/guide-figure';
 import { steps, fields, scenarios, troubleshooting } from '@/content/workshop';
 
 export const dynamic = 'force-static';
@@ -261,6 +262,12 @@ export default function Home() {
               facilitador. Se já concluiu parte do setup, confira os itens
               restantes.
             </p>
+            <p className="small-note">
+              As capturas mostram uma execução de referência com dados fictícios.
+              Use-as para localizar os controles; a interface, os nomes dos
+              visitantes, os contadores e as versões podem variar na sua org.
+              Clique em qualquer imagem para ampliar.
+            </p>
             <ol className="setup-list">
               <li>
                 <strong>Entrar e confirmar o acesso</strong>
@@ -285,6 +292,18 @@ export default function Home() {
                   ativos. Em <b>Agentforce Agents</b>, confirme que o Agentforce
                   está <b>On</b>.
                 </p>
+                <GuideFigure
+                  file="prework-mcp-ativos.png"
+                  title="Os dois servidores MCP ativos"
+                  alt="Setup, MCP Servers, aba Salesforce Servers: metadata-experts e salesforce-api-context com status Active."
+                  caption="Confira o status Active nas duas linhas. A ordenação e a largura das colunas foram ajustadas nesta tela para facilitar a leitura; os demais servidores não são necessários para este roteiro."
+                />
+                <GuideFigure
+                  file="prework-agentforce-on.png"
+                  title="Agentforce ligado na org"
+                  alt="Setup, Agentforce Agents, com a chave Agentforce marcada como On."
+                  caption="O ponto a conferir é a chave On no topo. O Guest Management Agent aparece porque esta captura foi feita após o laboratório; você só vai criá-lo a partir da etapa 8."
+                />
               </li>
               <li>
                 <strong>Abrir o Vibes e conectar o projeto</strong>
@@ -295,6 +314,12 @@ export default function Home() {
                   Espere o workspace carregar e confirme a org conectada no
                   projeto.
                 </p>
+                <GuideFigure
+                  file="prework-abrir-vibes.png"
+                  title="Onde abrir o Agentforce Vibes"
+                  alt="Menu da engrenagem do Salesforce aberto, com Agentforce Vibes entre Your Account e Developer Console."
+                  caption="Na engrenagem, procure Agentforce Vibes. O app de recepção ao fundo é o resultado do laboratório, não um requisito para abrir o workspace."
+                />
               </li>
               <li>
                 <strong>Verificar as ferramentas</strong>
@@ -362,6 +387,30 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
+              {step.id === 3 && (
+                <GuideFigure
+                  file="etapa-03-campos.png"
+                  title="Conferir os campos no Object Manager"
+                  alt="Guest Check-In, Fields & Relationships: rótulos, nomes de API e tipos dos campos, incluindo Host como Lookup(User) e Status como Picklist."
+                  caption="Em Object Manager → Guest Check-In → Fields & Relationships, compare nomes de API e tipos com a tabela desta etapa. Role a lista para conferir todos os campos; os campos de sistema também aparecem nela."
+                />
+              )}
+              {step.id === 7 && (
+                <GuideFigure
+                  file="etapa-07-recepcao.png"
+                  title="A recepção funcionando no app"
+                  alt="Guest Reception com dois cartões de resumo, busca e tabela de visitantes fictícios com anfitrião, status e motivo da visita."
+                  caption="Exemplo do LWC na org: contador de presentes, duração das visitas concluídas, busca e tabela. Nesta execução havia dois presentes; confira o contador contra os registros da sua própria org."
+                />
+              )}
+              {step.id === 10 && (
+                <GuideFigure
+                  file="etapa-10-agente-ativo.png"
+                  title="Identificar a versão ativa do agente"
+                  alt="Agentforce Builder, Guest Management Agent, com Version 3 (Active) no cabeçalho e o fluxo visual em Agent Definition."
+                  caption="Confira o nome do agente e o indicador Active no cabeçalho. Version 3 pertence à execução de referência: registre a versão publicada na sua org e valide seu comportamento na etapa 11."
+                />
+              )}
               <aside className="recovery">
                 <strong>Se travar</strong>
                 <p>{step.recovery}</p>

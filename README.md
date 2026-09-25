@@ -29,6 +29,8 @@ npm run dev
 - `content/workshop.ts`: fonte principal das 13 etapas, campos, cenários e diagnóstico.
 - `app/page.tsx`: estrutura da página, pre-work e orientações do facilitador.
 - `app/globals.css`: estilo responsivo e impressão.
+- `components/guide-figure.tsx`: imagens com texto alternativo, legenda e ampliação.
+- `public/images/`: capturas reais usadas no pre-work e nas etapas 3, 7 e 10.
 - `public/guia-do-facilitador.md`: material adicional para download.
 - `scripts/handouts.mjs`: gera os prompts e a ficha de validação a partir do mesmo conteúdo da página.
 
@@ -62,6 +64,10 @@ O repositório não contém credenciais, dados reais, logs da org de referência
 ## Origem e referências
 
 Inspirado no cenário e sequência do [workshop original de JF Lucindo](https://jflucindo.github.io/workshop-agentforce-vibes/). Texto, prompts e interface foram reescritos. Não foram copiados screenshots ou o código da página original.
+
+As seis imagens em `public/images/` foram capturadas em 25/09/2026 na org de treinamento usada na execução de referência. Mostram os MCPs ativos, Agentforce ligado, acesso ao Vibes, campos do objeto, LWC de recepção e versão ativa do agente. Os visitantes são fictícios. As capturas não incluem credenciais, URLs da org ou identificadores de sessão. Cada imagem tem legenda, texto alternativo e link para o arquivo original, sem depender de hospedagem externa.
+
+As telas orientam a navegação e a conferência visual; não substituem a validação dos passos. O app já construído, os contadores e a versão 3 do agente refletem aquela execução e não são pré-requisitos nem valores esperados para toda turma. Ao atualizar uma imagem, preserve o nome do arquivo ou atualize a referência em `app/page.tsx`, confira seu conteúdo antes de publicá-la e gere `docs/` novamente.
 
 - [MCPs no Agentforce Vibes](https://developer.salesforce.com/docs/platform/agentforcevibes/guide/afv-mcp-servers.html)
 - [Construir um Lightning App com Vibes](https://developer.salesforce.com/docs/platform/agentforcevibes/guide/afv-lexapp-overview.html)
